@@ -11,33 +11,33 @@ const Nav = () => {
         <div>
 
             <Grid container className='line'  spacing={11}>
-                <Grid  item xs={2} md={1} >
+                <Grid  item >
                 <a className='text-dec' href = "#EN" >EN </a>
                 </Grid>
                 <Divider orientation="vertical" flexItem />
-                <Grid  item xs={2} md={2}>
+                <Grid  item >
                 <a className='text-dec'  href = "#Skip">Skip to main content  </a>
                 </Grid>
                 <Divider orientation="vertical" flexItem />
-                <Grid item xs={2} md={2}>
+                <Grid item >
                 <a className='text-dec' href = "#ScreenReader">Screen Reader Access</a>
                 </Grid>                
-                <Grid  item xs={2} md={1}>
-                <li className='printer' >🖨️</li>
+                <Grid  item >
+                <li className='printer push-right' >🖨️</li>
                 </Grid>
-                <Grid  item xs={2} md={1}>
+                <Grid  item >
                 <li className='letters' >A-</li>
                 </Grid>
-                <Grid item xs={2} md={1}>
+                <Grid item >
                 <li className='letters'>A</li>
                 </Grid>
-                <Grid item xs={2} md={1}>
+                <Grid item >
                 <li className='letters'>A+</li>
                 </Grid>
-                <Grid  item xs={2} md={1}>
+                <Grid  item >
                 <li className='letter-black'>A</li>
                 </Grid>
-                <Grid  item xs={2} md={1}>
+                <Grid  item >
                 <li className='letter-bold'>A</li>
                 </Grid>
                 <Grid  item>

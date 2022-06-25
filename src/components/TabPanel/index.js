@@ -147,13 +147,7 @@ export default function FullWidthTabs() {
 
             <Grid  item xs={12} md={12} >
             <form  className='forms'>
-          {/* <div>
-            <label className = 'main'>
-             <input className='checkmark' onChange= {handleCheckbox} type="checkbox" id={item.index} ></input>
-              <span className = 'geekmark'></span>
-            {item.name} 
-            </label> 
-          </div> */}
+
           <div>
           <h2 >
             {item.name}
@@ -161,7 +155,7 @@ export default function FullWidthTabs() {
           <h3>
             {item.name2}
           </h3>
-          <div className = 'align-right'>
+          <div className = 'float-right2'>
           <img  alt =  '' src= {Image2}/>
           <select className='drop-down2' name = "Business">
                             

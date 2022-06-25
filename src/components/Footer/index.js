@@ -8,35 +8,48 @@ const Footer = () => {
 
     return (
 
-        // <div>      
+     
         <div className='overlay'>
-            {/* <div className = 'position'> */}
-            <Grid container className='footer2'  spacing={1}>
-            <Grid  item xs={2} md={1} >
-            <a className='footer' href = "#Terms">Terms and Conditions  </a>
-            </Grid>
-            <Grid  item xs={2} md={1} >
-            <div className='footer'>|</div>
-            </Grid>
-            <Grid  item xs={2} md={1} >
+
+
+            <div>
+            <a className='footer move-right2' href = "#Terms">Terms and Conditions | </a>
+   
             <a className='footer' href = "#NIC">NIC Mail  </a>
-            </Grid>
-            </Grid>
-            {/* </div> */}
-            {/* <div> */}
-            <Grid container  spacing={1}>
-            <Grid  item xs={2} md={1} >
-            <a className='footer' href = "#Policies">Website Policies  </a>
-            </Grid>
-            <Grid  item xs={2} md={1} >
-            {/* <Divider orientation="vertical" flexItem /> */}
+
+            </div>
+
+            <div>
+            <a className='footer move-right2' href = "#Policies">Newspapers | </a>
+
+
+            <a className='footer' href = "#data">india.gov.in  </a>
+            </div>
+
+            <div>
+            <a className='footer move-right2' href = "#Policies">Website Policies | </a>
+
+
             <a className='footer' href = "#data">data.gov.in  </a>
-            </Grid>
-            </Grid>
-            {/* </div> */}
+            </div>
+            <div>
+            
+            <a className='footer move-right2' href = "#Policies">Feedback | </a>
+
+
+            <a className='footer' href = "#data">Contact Us |  </a>
+
+            <a className='footer' href = "#data">Visitor's Center  </a>
+            <p className='move-right2'>
+                This site is designed and hosted by National Information Centre
+            </p>
+            </div>
+
+
+
         </div>
         
-        // </div>
+
 
         )
     }
