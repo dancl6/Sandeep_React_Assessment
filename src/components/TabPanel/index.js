@@ -15,29 +15,29 @@ import {Grid} from '@mui/material'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  const [page, setPage] = useState(2);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  // const [page, setPage] = useState(2);
+  // const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+  // const handleChangePage = (event, newPage) => {
+  //   setPage(newPage);
+  // };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+  // const handleChangeRowsPerPage = (event) => {
+  //   setRowsPerPage(parseInt(event.target.value, 10));
+  //   setPage(0);
+  // };
 
-  const [selected, setSelected] = useState([]);
+  // const [selected, setSelected] = useState([]);
 
-  function onChange(event, item) {
-    if (event.target.checked) {
-      setSelected([...selected, item]);
-    } else {
-      setSelected((prev) =>
-        prev.filter((currItem) => currItem.value !== item.value)
-      );
-    }
-  }
+  // function onChange(event, item) {
+  //   if (event.target.checked) {
+  //     setSelected([...selected, item]);
+  //   } else {
+  //     setSelected((prev) =>
+  //       prev.filter((currItem) => currItem.value !== item.value)
+  //     );
+  //   }
+  // }
 
 
   return (
@@ -96,22 +96,22 @@ export default function FullWidthTabs() {
     console.log("indexing is:", index)
   };
   console.log('number checked is:', checked)
-  const [testData, setTestData] = useState([
+  const testData = [
     {index:0,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 1,name: "Application for allotment of Guest Accommodation", name2: "MEMBERS AMENITIES SECTION FORM"},
     {index: 2,name: "NICNET Application Form", name2: "I.T. SECTION (H&S) FORMS"},
     {index: 3,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 4, name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 5,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"}
-  ]);
+  ];
 
-  const [testData2, setTestData2] = useState([
+  const testData2 = [
     {index:0,name: "Zero Hour", name2: "Rating of matter with permission"},
     {index: 1,name: "Short Notice Question", name2: "Issuing of Half-an-Hour Discussion"},
     {index: 2,name: "Half-an-Hour Discussion", name2: "Notice of my intention to call the Minister's attention"},
     {index: 3,name: "Calling Attention", name2: "Notice of my intention to call the Minister's attention"},
     {index: 4, name: "Short Duration Discussion", name2: "Notice of my intention to raise a discussion for short duration"}
-  ]);
+  ];
 
 
   return (
@@ -140,7 +140,6 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
         
       >
-
         <TabPanel value={value} index={0} dir={theme.direction}>
         <Grid container   spacing={11}>
         {testData2.map(item => (
@@ -148,24 +147,22 @@ export default function FullWidthTabs() {
             <Grid  item xs={12} md={12} >
             <form  className='forms'>
 
-          <div>
-          <h2 >
-            {item.name}
-          </h2>
-          <h3>
-            {item.name2}
-          </h3>
-          <div className = 'float-right2'>
-          <img  alt =  '' src= {Image2}/>
-          <select className='drop-down2' name = "Business">
-                            
-          </select>
-          </div>
-          </div>
+              <div>
+                <h2 >
+                  {item.name}
+                </h2>
+                <h3>
+                  {item.name2}
+                </h3>
+                <div className = 'float-right2'>
+                <img  alt =  '' src= {Image2}/>
+                <select className='drop-down2' name = "Business">
+                                  
+                </select>
+                </div>
+              </div>
           </form>
             </Grid>
-    
-
       ))}
           </Grid>
         </TabPanel>
@@ -177,7 +174,7 @@ export default function FullWidthTabs() {
             <form  className='forms'>
           <div>
             <label className = 'main'>
-             <input className='checkmark' onChange= {handleCheckbox} type="checkbox" id={item.index} ></input>
+             <input  onChange= {handleCheckbox} type="checkbox" id={item.index} ></input>
               <span className = 'geekmark'></span>
             {item.name} 
             </label> 
@@ -208,14 +205,10 @@ export default function FullWidthTabs() {
       <TablePagination
         component="div"
         count={100}
-        // page={page}
-        // onPageChange={handleChangePage}
-        // rowsPerPage={rowsPerPage}
-        // onRowsPerPageChange={handleChangeRowsPerPage}
         page={0}
         onPageChange={12}
         rowsPerPage={10}
-        // onRowsPerPageChange={handleChangeRowsPerPage}
+
       />
       </Grid>
       </Grid>

@@ -25,25 +25,10 @@ li {
   margin-left: 15em;
 }
 
-/* .outer {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-  padding-left: 1em;
-} */
-
-/* .inner {
-  display: inline;
-  padding: 0.5em;
-} */
-
-
 .printer {
   border-style: solid;
  border-width: 0.02em;
  border-color: black;
- /* padding: 0.5em; */
 }
 
 
@@ -90,10 +75,6 @@ li {
   margin-right: 8em;
 }
 
-.second-nav {
-  margin: 1em;
-  width: 4em;
-}
 
 .drop-down {
   width: 7em;
@@ -152,10 +133,6 @@ li {
   
 }
 
-.checkmark {
-  border-color: red;
-  color: red;
-}
 
 .main {
   display: block;
@@ -293,13 +270,9 @@ shown when checkbox is checked */
 .footer {
   color: white;
   text-decoration: none;
-  /* overflow: hidden; */
-  white-space: nowrap;
-  /* margin-left: 15em; */
-  
+  white-space: nowrap;  
 }
 
 .move-right2 {
-  margin-left: 10em;
-  
+  margin-left: 10em;  
 }
