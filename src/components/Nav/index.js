@@ -1,5 +1,3 @@
-import {FormGroup, FormControlLabel, Switch} from '@mui/material'
-
 import {Grid, Divider, createTheme} from '@mui/material'
 import Image from  '../../images/RajyaSabhaPic.jpg'
 import { slide as Menu } from 'react-burger-menu'

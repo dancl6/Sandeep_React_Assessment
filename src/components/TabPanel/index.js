@@ -9,7 +9,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TablePagination from '@mui/material/TablePagination';
-
+import Image from  '../../images/pdf-icon-4.jpg'
+import {Grid} from '@mui/material'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -37,16 +38,6 @@ function TabPanel(props) {
     }
   }
 
-
-  
-  // const [testData, setTestData] = useState([
-  //   {name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
-  //   {name: "Application for allotment of Guest Accommodation", name2: "MEMBERS AMENITIES SECTION FORM"},
-  //   {name: "NICNET Application Form", name2: "I.T. SECTION (H&S) FORMS"},
-  //   {name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
-  //   {name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
-  //   {name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"}
-  // ])
 
   return (
     <div
@@ -111,8 +102,8 @@ export default function FullWidthTabs() {
   ]);
 
   return (
-    <Box sx={{ bgcolor: 'background.paper', width: 500 }}>
-      <div>{checked} Forms Selected</div>
+    <Box sx={{ bgcolor: 'background.paper'}}>
+      <div className='formsSelected'>{checked} Forms Selected</div>
       <AppBar position="static">
         <Tabs
           value={value}
@@ -136,8 +127,11 @@ export default function FullWidthTabs() {
       >
 
         <TabPanel value={value} index={0} dir={theme.direction}>
+        <Grid container   spacing={11}>
         {testData.map(item => (
-          <form  className='forms'>
+
+            <Grid  item xs={12} md={12} >
+            <form  className='forms'>
           <div>
             <label className = 'main'>
              <input className='checkmark' onChange= {handleCheckbox} type="checkbox" id={item.index} ></input>
@@ -145,14 +139,16 @@ export default function FullWidthTabs() {
             {item.name} 
             </label> 
           </div>
-          <div>
+          <div className='blue-back'>
             {item.name2}
           </div>
+          <img  alt =  '' src= {Image}/>
           </form>
-      
+            </Grid>
+    
 
       ))}
-
+          </Grid>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           Application Forms
