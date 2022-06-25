@@ -1,58 +1,114 @@
 import {FormGroup, FormControlLabel, Switch} from '@mui/material'
-// import {Grid, Item} from '@mui/material'
-import {Grid, Paper, TextField} from '@mui/material'
 
-// import Item from '@mui/material/Item'
+import {Grid, Divider, createTheme} from '@mui/material'
+import Image from  '../../images/RajyaSabhaPic.jpg'
+import { slide as Menu } from 'react-burger-menu'
+const theme = createTheme()
 const Nav = () => {
+
+
+
     return (
 
         <div>
-            <Grid container>
-
-                <Grid className='inner' item xs={2} md={1} >
+            <Grid container className='line'  spacing={11}>
+                <Grid  item xs={2} md={1} >
                 <a href = "#EN" >EN </a>
                 </Grid>
-                <Grid className='inner' item xs={2} md={1}>
+                <Divider orientation="vertical" flexItem />
+                <Grid  item xs={2} md={1}>
                 <a href = "#Skip">Skip to main content  </a>
                 </Grid>
-                <Grid className='inner' item xs={2} md={1}>
+                <Divider orientation="vertical" flexItem />
+                <Grid item xs={2} md={1}>
                 <a href = "#ScreenReader">Screen Reader Access</a>
                 </Grid>                
-                <Grid className='inner' item>
-                <li className='printer'>🖨️</li>
+                <Grid  item>
+                <li className='printer' >🖨️</li>
                 </Grid>
-                <Grid className='inner' item>
-                <li className='letters'>A-</li>
+                <Grid  item>
+                <li className='letters' >A-</li>
                 </Grid>
-                <Grid className='inner' item>
+                <Grid item>
                 <li className='letters'>A</li>
                 </Grid>
-                <Grid className='inner' item>
+                <Grid item>
                 <li className='letters'>A+</li>
                 </Grid>
-                <Grid className='inner' item>
+                <Grid  item>
                 <li className='letter-black'>A</li>
                 </Grid>
-                <Grid className='inner' item>
+                <Grid  item>
                 <li className='letter-bold'>A</li>
                 </Grid>
-                <Grid className='inner' item>
-                <TextField id="outlined-basic" label="🔎 Search here" variant="outlined"></TextField>
+                <Grid  item>
+        
+                <input placeholder="🔎Search here"></input>
                 </Grid>  
             </Grid>
-            {/* <li><a href = "#Skip" >EN </a></li>
-                <li>|</li>
-                <li><a href = "#Skip">Skip to main content  </a></li>
-                <li>|</li>
-                <li><a href = "#ScreenReader">Screen Reader Access</a></li>
-            <ul>
-                <li className='printer'>🖨️</li>
-            </ul>
-            <ul>
-                <li className='navs'>A-</li>
-                <li className='navs'>A</li>
-                <li className='navs'>A+</li>
-            </ul> */}
+
+            <Grid container className='line2'>
+                <Grid  item >
+                <img className='raj-img' alt =  '' src= {Image}/>
+                </Grid>                
+                <Grid  item >
+                    <form  >          
+                        <select className='drop-down' name = "About">
+                            <option >About</option>
+                        </select>
+                    </form>
+                </Grid>
+                <Grid  item >
+                    <form  >          
+                        <select className='drop-down' name = "Members">
+                            <option >Members</option>
+                        </select>
+                    </form>
+                </Grid>
+                <Grid  item >
+                     <form  >          
+                        <select className='drop-down' name = "Business">
+                            <option >Business</option>
+                        </select>
+                    </form>
+                </Grid>
+                <Grid  item >
+                    <form  >          
+                        <select className='drop-down' name = "Debates">
+                            <option >Debates</option>
+                        </select>
+                    </form>
+                </Grid>
+                <Grid  item >
+                   <form  >          
+                        <select className='drop-down' name = "Committees">
+                            <option >Committees</option>
+                        </select>
+                    </form>
+                </Grid>                
+                <Grid  item >
+                   <form  >          
+                        <select className='drop-down' name = "Business">
+                            <option >Business</option>
+                        </select>
+                    </form>
+                </Grid>
+                <Grid  item >
+
+                    <div className='more '>
+                        More
+                    </div>
+
+
+                </Grid>
+                <Grid  item >
+                <button className='login' href = "#Login">Login</button>
+                </Grid>
+            </Grid>
+
+            <a className='downloads' href = "#downloads">Home /Downloads</a>
+            <div className='large-downloads'>Downloads</div>
+
         </div>
 
 
