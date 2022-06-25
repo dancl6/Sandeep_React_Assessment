@@ -75,7 +75,7 @@ export default function FullWidthTabs() {
   const [value, setValue] = React.useState(0);
   const [checked, setChecked] = useState(0)
  const  handleCheckbox = event => {
-      console.log(event.target.checked)
+
       if(event.target.checked === true){
         setChecked(checked + 1)
       } 
@@ -87,15 +87,12 @@ export default function FullWidthTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    console.log("indexing 2 is:", newValue)
     setChecked(0)
   };
 
   const handleChangeIndex = (index) => {
     setValue(index);
-    console.log("indexing is:", index)
   };
-  console.log('number checked is:', checked)
   const testData = [
     {index:0,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 1,name: "Application for allotment of Guest Accommodation", name2: "MEMBERS AMENITIES SECTION FORM"},

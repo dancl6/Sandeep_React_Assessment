@@ -96,8 +96,6 @@ const Nav = () => {
             <a className='downloads' href = "#downloads">Home /Downloads</a>
             <div className='large-downloads'>Downloads</div>
         </div>
-
-
     )
 }
 
