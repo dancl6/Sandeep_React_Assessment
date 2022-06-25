@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <TabPanel></TabPanel>
-      <input className='search-width' placeholder="🔎Search for a word"></input>
+
 
 
       

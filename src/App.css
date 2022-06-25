@@ -138,14 +138,11 @@ li {
   background-color: red;
 }
 
-.search-width {
-  width: 100%;
-  height: 3em;
-}
 
 .forms {
   width: 100%;
   border-style: solid;
+  
 }
 
 .checkmark {
@@ -246,3 +243,23 @@ shown when checkbox is checked */
   white-space: nowrap;
 }
   
+.float-right{
+  display: flex;
+  float: right;
+}
+
+.drop-down2 {
+  border: none;
+}
+
+.search2 {
+  margin-top: 3em ;
+  margin-bottom: 3em;
+  width: 100%;
+  height: 3em;
+}
+
+.align-right {
+  align-items: right;
+  display: flex;
+}
