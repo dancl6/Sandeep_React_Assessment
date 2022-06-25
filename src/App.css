@@ -17,20 +17,22 @@ li {
   padding: 0.5em;
 }
 
+.text-dec{
+  text-decoration: none;
+}
 
-
-.outer {
+/* .outer {
   list-style-type: none;
   margin: 0;
   padding: 0;
   float: left;
   padding-left: 1em;
-}
+} */
 
-.inner {
+/* .inner {
   display: inline;
   padding: 0.5em;
-}
+} */
 
 
 .printer {
@@ -263,3 +265,25 @@ shown when checkbox is checked */
   align-items: right;
   display: flex;
 }
+
+.gov {
+  width: 100%;
+}
+
+.overlay {
+  color: white;
+  width: 100%;
+  background: url(./images/indian_gov.jpg);
+  height:25em; 
+}
+
+.footer {
+  color: white;
+  text-decoration: none;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  margin-left: 15em;
+  
+}
+
+

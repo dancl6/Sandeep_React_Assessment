@@ -9,34 +9,35 @@ const Nav = () => {
     return (
 
         <div>
+
             <Grid container className='line'  spacing={11}>
                 <Grid  item xs={2} md={1} >
-                <a href = "#EN" >EN </a>
+                <a className='text-dec' href = "#EN" >EN </a>
                 </Grid>
                 <Divider orientation="vertical" flexItem />
-                <Grid  item xs={2} md={1}>
-                <a href = "#Skip">Skip to main content  </a>
+                <Grid  item xs={2} md={2}>
+                <a className='text-dec'  href = "#Skip">Skip to main content  </a>
                 </Grid>
                 <Divider orientation="vertical" flexItem />
-                <Grid item xs={2} md={1}>
-                <a href = "#ScreenReader">Screen Reader Access</a>
+                <Grid item xs={2} md={2}>
+                <a className='text-dec' href = "#ScreenReader">Screen Reader Access</a>
                 </Grid>                
-                <Grid  item>
+                <Grid  item xs={2} md={1}>
                 <li className='printer' >🖨️</li>
                 </Grid>
-                <Grid  item>
+                <Grid  item xs={2} md={1}>
                 <li className='letters' >A-</li>
                 </Grid>
-                <Grid item>
+                <Grid item xs={2} md={1}>
                 <li className='letters'>A</li>
                 </Grid>
-                <Grid item>
+                <Grid item xs={2} md={1}>
                 <li className='letters'>A+</li>
                 </Grid>
-                <Grid  item>
+                <Grid  item xs={2} md={1}>
                 <li className='letter-black'>A</li>
                 </Grid>
-                <Grid  item>
+                <Grid  item xs={2} md={1}>
                 <li className='letter-bold'>A</li>
                 </Grid>
                 <Grid  item>

@@ -88,6 +88,7 @@ export default function FullWidthTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
     console.log("indexing 2 is:", newValue)
+    setChecked(0)
   };
 
   const handleChangeIndex = (index) => {
