@@ -2,7 +2,7 @@ import {Box, Container} from '@mui/material'
 import PersonImage from  '../../images/person.jpg'
 import PageImage from '../../images/page.jpg'
 import DownArrowImage from '../../images/down-arrow.jpg'
-
+// Footer component to display image and links at bottom of page
 const Footer = () => {
     return (   
 

@@ -10,7 +10,7 @@ import TablePagination from '@mui/material/TablePagination';
 import Image from  '../../images/pdf-icon-4.jpg'
 import Image2 from '../../images/download.jpg'
 import {Grid, Typography} from '@mui/material'
-
+// Tab component to load forms
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -65,7 +65,7 @@ export default function FullWidthTabs() {
     setChecked(0)
   };
 
-
+  // Seed test data for Application Forms
   const testData = [
     {index:0,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 1,name: "Application for allotment of Guest Accommodation", name2: "MEMBERS AMENITIES SECTION FORM"},
@@ -74,7 +74,7 @@ export default function FullWidthTabs() {
     {index: 4, name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 5,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"}
   ];
-
+  // Seed test data for Preliminary Notice Forms
   const testData2 = [
     {index:0,name: "Zero Hour", name2: "Rating of matter with permission"},
     {index: 1,name: "Short Notice Question", name2: "Issuing of Half-an-Hour Discussion"},

@@ -1,5 +1,6 @@
 import {Grid} from '@mui/material'
 import Image from  '../../images/RajyaSabhaPic.jpg'
+// Navbar component to create navbars at top of page
 const Nav = () => {
 
     return (
