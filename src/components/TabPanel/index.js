@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {useState} from 'react';
 import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
@@ -10,7 +9,7 @@ import Box from '@mui/material/Box';
 import TablePagination from '@mui/material/TablePagination';
 import Image from  '../../images/pdf-icon-4.jpg'
 import Image2 from '../../images/download.jpg'
-import {Grid, Container} from '@mui/material'
+import {Grid, Typography} from '@mui/material'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -25,11 +24,9 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Container>
-        <Box >
-          {children}
-        </Box>
-        </Container>
+        <Box p={3}>
+        <Typography>{children}</Typography>
+      </Box>
       )}
     </div>
   );
@@ -68,9 +65,7 @@ export default function FullWidthTabs() {
     setChecked(0)
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+
   const testData = [
     {index:0,name: "Application for Car Park Label (for Sitting MP)", name2: "NOTICE OFFICE FORMS"},
     {index: 1,name: "Application for allotment of Guest Accommodation", name2: "MEMBERS AMENITIES SECTION FORM"},
@@ -90,13 +85,13 @@ export default function FullWidthTabs() {
 
   function fun() {
     console.log('hello')
-
+    
   }
   return (
-    <Box key='tab-box' sx={{ bgcolor: 'background.paper'}}>
+    <Box key='tab-box'  sx={{ bgcolor: 'background.paper'}}>
 
 
-      <AppBar  position="static">
+      <AppBar className='box-tab' position="static">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -114,22 +109,17 @@ export default function FullWidthTabs() {
       <input className=' search2' placeholder="🔎Search for a word"></input>
       { value === 1?    (  
       <div>
-      <div className='formsSelected same-line'>{checked} Forms Selected <span className='same-line2'>Download Forms</span></div>
+      <div className='formsSelected same-line'>{checked} Forms Selected <span className='same-line2'>v   Download Forms   x</span></div>
 
       </div>
       ) : null   }
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-        
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-        <Grid container  >
+      <div>
+        <TabPanel  value={value} index={0} dir={theme.direction}>
+        <Grid  container  >
         {testData2.map(item => (
 
-            <Grid  item xs={12} md={12} key={item.index} >
-            <form  className='forms'>
+            <Grid   item xs={12} md={12} key={item.index} >
+            <form   className='forms tab-panel'>
 
               <div>
                 <h3 >
@@ -183,7 +173,7 @@ export default function FullWidthTabs() {
         <TabPanel value={value} index={2} dir={theme.direction} key= "tab-forms">
           Forms for New Members
         </TabPanel>
-      </SwipeableViews>
+      </div>
       <Grid container   spacing={11}>
       <Grid  item xs={12} md={12} >
       <TablePagination
