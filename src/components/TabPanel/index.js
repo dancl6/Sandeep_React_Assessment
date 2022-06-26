@@ -186,13 +186,6 @@ export default function FullWidthTabs() {
       />
       </Grid>
       </Grid>
-
-
-
     </Box>
-
-
-
-
   );
 }
