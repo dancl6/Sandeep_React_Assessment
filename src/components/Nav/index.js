@@ -3,16 +3,16 @@ import Image from  '../../images/RajyaSabhaPic.jpg'
 const Nav = () => {
 
     return (
-        <div>
-            <Grid container className='margin-top'  spacing={11}>
+        <div key = 'nav-div'>
+            <Grid key = 'nav-grid1' container className='margin-top'  spacing={11}>
                 <Grid  item >
-                    <a className='text-dec' href = "#EN" >EN </a>
+                    <a className='text-dec2' href = "#EN" >EN </a>
                 </Grid>
                 <Grid  item >
-                    <a className='text-dec'  href = "#Skip">Skip to main content  </a>
+                    <a className='text-dec2'  href = "#Skip">Skip to main content  </a>
                 </Grid>
                 <Grid item >
-                    <a className='text-dec' href = "#ScreenReader">Screen Reader Access</a>
+                    <a className='text-dec2' href = "#ScreenReader">Screen Reader Access</a>
                 </Grid>                
                 <Grid  item >
                     <li className='printer push-right' >🖨️</li>
@@ -36,8 +36,8 @@ const Nav = () => {
                     <input className='search' placeholder="🔎Search here"></input>
                 </Grid>  
             </Grid>
-            <hr className="solid" ></hr>
-            <Grid container className='line2'>
+            <hr key='nav-hr-element' className="solid" ></hr>
+            <Grid key= 'nav-grid2' container className='line2'>
                 <Grid  item >
                     <img className='raj-img' alt =  '' src= {Image}/>
                 </Grid>                
@@ -92,8 +92,8 @@ const Nav = () => {
                     <button className='login' href = "#Login">Login</button>
                 </Grid>
             </Grid>
-            <a className='downloads' href = "#downloads">Home /Downloads</a>
-            <div className='large-downloads'>Downloads</div>
+            <a key='nav-downloads' className='downloads' href = "#downloads">Home /Downloads</a>
+            <div key='nav-div-downloads' className='large-downloads'>Downloads</div>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import TabPanel from './components/TabPanel'
 import Footer from './components/Footer'
 function App() {
   return (
-    <div className="App">
+    <div className="App" key='app-div'>
       <Nav></Nav>
       <TabPanel></TabPanel>
       <Footer></Footer>

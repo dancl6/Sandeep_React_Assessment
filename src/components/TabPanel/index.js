@@ -6,12 +6,12 @@ import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TablePagination from '@mui/material/TablePagination';
 import Image from  '../../images/pdf-icon-4.jpg'
 import Image2 from '../../images/download.jpg'
-import {Grid} from '@mui/material'
+import {Grid, Container} from '@mui/material'
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -25,9 +25,11 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Container>
+        <Box >
+          {children}
         </Box>
+        </Container>
       )}
     </div>
   );
@@ -86,12 +88,15 @@ export default function FullWidthTabs() {
     {index: 4, name: "Short Duration Discussion", name2: "Notice of my intention to raise a discussion for short duration"}
   ];
 
+  function fun() {
+    console.log('hello')
 
+  }
   return (
-    <Box sx={{ bgcolor: 'background.paper'}}>
+    <Box key='tab-box' sx={{ bgcolor: 'background.paper'}}>
 
 
-      <AppBar position="static">
+      <AppBar  position="static">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -123,7 +128,7 @@ export default function FullWidthTabs() {
         <Grid container  >
         {testData2.map(item => (
 
-            <Grid  item xs={12} md={12} >
+            <Grid  item xs={12} md={12} key={item.index} >
             <form  className='forms'>
 
               <div>
@@ -149,7 +154,7 @@ export default function FullWidthTabs() {
         <Grid container   >
         {testData.map(item => (
 
-            <Grid  item xs={12} md={12} >
+            <Grid  item xs={12} md={12} key={item.index} >
             <form  className='forms'>
           <div>
             <label className = 'main'>
@@ -175,7 +180,7 @@ export default function FullWidthTabs() {
       ))}
           </Grid>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel value={value} index={2} dir={theme.direction} key= "tab-forms">
           Forms for New Members
         </TabPanel>
       </SwipeableViews>
@@ -185,7 +190,7 @@ export default function FullWidthTabs() {
         component="div"
         count={100}
         page={0}
-        onPageChange={12}
+        onPageChange={fun()}
         rowsPerPage={10}
 
       />
