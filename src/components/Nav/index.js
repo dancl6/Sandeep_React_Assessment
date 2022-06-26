@@ -2,11 +2,9 @@ import {Grid} from '@mui/material'
 import Image from  '../../images/RajyaSabhaPic.jpg'
 const Nav = () => {
 
-
-
     return (
         <div>
-            <Grid container className='line'  spacing={11}>
+            <Grid container className='margin-top'  spacing={11}>
                 <Grid  item >
                     <a className='text-dec' href = "#EN" >EN </a>
                 </Grid>
@@ -35,9 +33,10 @@ const Nav = () => {
                     <li className='letter-bold'>A</li>
                 </Grid>
                 <Grid  item>        
-                    <input placeholder="🔎Search here"></input>
+                    <input className='search' placeholder="🔎Search here"></input>
                 </Grid>  
             </Grid>
+            <hr className="solid" ></hr>
             <Grid container className='line2'>
                 <Grid  item >
                     <img className='raj-img' alt =  '' src= {Image}/>

@@ -15,30 +15,6 @@ import {Grid} from '@mui/material'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  // const [page, setPage] = useState(2);
-  // const [rowsPerPage, setRowsPerPage] = useState(10);
-
-  // const handleChangePage = (event, newPage) => {
-  //   setPage(newPage);
-  // };
-
-  // const handleChangeRowsPerPage = (event) => {
-  //   setRowsPerPage(parseInt(event.target.value, 10));
-  //   setPage(0);
-  // };
-
-  // const [selected, setSelected] = useState([]);
-
-  // function onChange(event, item) {
-  //   if (event.target.checked) {
-  //     setSelected([...selected, item]);
-  //   } else {
-  //     setSelected((prev) =>
-  //       prev.filter((currItem) => currItem.value !== item.value)
-  //     );
-  //   }
-  // }
-
 
   return (
     <div
@@ -113,7 +89,7 @@ export default function FullWidthTabs() {
 
   return (
     <Box sx={{ bgcolor: 'background.paper'}}>
-      { value === 1?    (  <div className='formsSelected'>{checked} Forms Selected</div>) : null   }
+
 
       <AppBar position="static">
         <Tabs
@@ -131,6 +107,12 @@ export default function FullWidthTabs() {
         </Tabs>
       </AppBar>
       <input className=' search2' placeholder="🔎Search for a word"></input>
+      { value === 1?    (  
+      <div>
+      <div className='formsSelected same-line'>{checked} Forms Selected <span className='same-line2'>Download Forms</span></div>
+
+      </div>
+      ) : null   }
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
@@ -138,19 +120,19 @@ export default function FullWidthTabs() {
         
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <Grid container   spacing={11}>
+        <Grid container  >
         {testData2.map(item => (
 
             <Grid  item xs={12} md={12} >
             <form  className='forms'>
 
               <div>
-                <h2 >
+                <h3 >
                   {item.name}
-                </h2>
-                <h3>
-                  {item.name2}
                 </h3>
+                <h4>
+                  {item.name2}
+                </h4>
                 <div className = 'float-right2'>
                 <img  alt =  '' src= {Image2}/>
                 <select className='drop-down2' name = "Business">
@@ -164,7 +146,7 @@ export default function FullWidthTabs() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <Grid container   spacing={11}>
+        <Grid container   >
         {testData.map(item => (
 
             <Grid  item xs={12} md={12} >

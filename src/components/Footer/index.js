@@ -17,9 +17,9 @@ const Footer = () => {
                 <a className='footer move-right2' href = "#Policies">Feedback | </a>
                 <a className='footer' href = "#data">Contact Us |  </a>
                 <a className='footer' href = "#data">Visitor's Center  </a>
-                <p className='move-right2'>
+                {/* <p className='move-right2'>
                     This site is designed and hosted by National Information Centre
-                </p>
+                </p> */}
             </div>
         </div>
         )
